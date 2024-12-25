@@ -12,6 +12,7 @@ COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
 
 RUN bundle install
+RUN bundle exec rake db:migrate
 
 # Copiando o código da aplicação
 COPY . /app

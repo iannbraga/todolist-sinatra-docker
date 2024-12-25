@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todolist</title>
+</head>
+<body>
+  <h1>My Todo List</h1>
+
+  <form action="/tasks" method="POST">
+    <input type="text" name="name" placeholder="New task" required>
+    <button type="submit">Add Task</button>
+  </form>
+
+  <ul>
+    <% @tasks.each do |task| %>
+      <li>
+        <%= task.name %> <% if task.done %>(Done)<% end %>
+        <form action="/tasks/<%= task.id %>/complete" method="POST" style="display:inline;">
+          <button type="submit" <% if task.done %>disabled<% end %> >Complete</button>
+        </form>
+      </li>
+    <% end %>
+  </ul>
+</body>
+</html>
