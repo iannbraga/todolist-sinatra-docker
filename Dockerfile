@@ -12,10 +12,11 @@ COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
 
 RUN bundle install
-RUN bundle exec rake db:migrate
 
 # Copiando o código da aplicação
-COPY . /app
+COPY . .
+
+RUN bundle exec rake db:migrate
 
 # Expondo a porta que o Sinatra vai usar
 EXPOSE 4567

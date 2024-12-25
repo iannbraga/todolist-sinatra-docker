@@ -11,3 +11,5 @@ gem "rackup", "~> 2.2"
 gem "sinatra-activerecord", "~> 2.0"
 gem "sqlite3", "~> 2.5"
 gem "rake", "~> 13.2"
+
+gem "sinatra-cors", "~> 1.2"

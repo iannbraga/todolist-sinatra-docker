@@ -58,6 +58,7 @@ GEM
     sinatra-activerecord (2.0.28)
       activerecord (>= 4.1)
       sinatra (>= 1.0)
+    sinatra-cors (1.2.0)
     sqlite3 (2.5.0)
       mini_portile2 (~> 2.8.0)
     sqlite3 (2.5.0-x86_64-linux-gnu)
@@ -77,6 +78,7 @@ DEPENDENCIES
   rake (~> 13.2)
   sinatra (~> 4.1)
   sinatra-activerecord (~> 2.0)
+  sinatra-cors (~> 1.2)
   sqlite3 (~> 2.5)
 
 BUNDLED WITH
